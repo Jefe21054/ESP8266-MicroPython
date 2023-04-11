@@ -1,0 +1,20 @@
+https://docs.python.org/3/library/venv.html#how-venvs-work
+https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware
+
+On Linux:
+1 -- python3 -m venv venv
+2 -- source venv/bin/activate
+3 -- pip install -r requirements.txt
+4 -- pip freeze
+5 -- cd firmware
+6 -- python3 -m esptool --port /dev/ttyUSB0 erase_flash
+7 -- python3 -m esptool --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect 0 esp8266-20220618-v1.19.1.bin
+
+On Windows:
+1 -- python -m venv venv
+2 -- venv\Scripts\activate
+3 -- pip install -r requirements.txt
+4 -- pip freeze
+5 -- cd firmware
+6 -- python -m esptool --port COM4 erase_flash
+7 -- python -m esptool --port COM4 --baud 460800 write_flash --flash_size=detect 0 esp8266-20220618-v1.19.1.bin
