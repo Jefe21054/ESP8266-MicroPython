@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IoT Control Webpage</title>
+        <style>
+            /* Set default font and background color for the body */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #646464;
+            }
+
+            /* Navbar Styles */
+            header {
+                background-color: #4584B6; /* Change color to match Android 12L */
+                height: 80px;
+            }
+
+            nav {
+                display: flex;
+                justify-content: center; /* Center the content horizontally */
+                align-items: center; /* Center the content vertically */
+                height: 100%;
+                padding: 0 20px;
+            }
+
+            .logo {
+                display: flex;
+                justify-content: center; /* Center the content horizontally */
+                align-items: center; /* Center the content vertically */
+            }
+
+            .logo img {
+                height: 60px;
+                margin-right: 20px;
+            }
+
+            .logo h1 {
+                color: #FFDE57;
+                font-size: 24px;
+                margin: 0;
+                align-items: center;
+                margin: 0 auto; /* Set the left and right margins to auto */
+            }
+
+            ul {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            ul li {
+                margin: 0 10px;
+            }
+
+            ul li a {
+                color: #FFDE57;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+            ul li a:hover {
+                text-decoration: underline;
+            }
+
+            /* Content Container Styles */
+            main {
+                padding: 50px;
+            }
+
+            .content-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .column {
+                flex-basis: calc(50% - 20px);
+                margin-bottom: 40px;
+            }
+
+            .card {
+                background-color: #FFDE57;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                text-align: center;
+            }
+
+            .card img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .card h2 {
+                margin: 0;
+                font-size: 24px;
+                color: #4584B6; /* Change color to match Android 12L */
+            }
+
+            .on-btn {
+                background-color: #4584B6; /* Change color to match Android 12L */
+                color: #FFDE57;
+                border: none;
+                padding: 5px 10px;
+            }
+
+            .off-btn {
+                background-color: #646464; /* Change color to match Android 12L */
+                color: #FFDE57;
+                border: none;
+                padding: 5px 10px;
+            }
+        </style>
+        <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/K6lnJ5a.png">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="https://i.imgur.com/kyHOKki.png" alt="Logo">
+                    <h1>Iglesias IoT</h1>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Content Container -->
+        <main>
+            <div class="content-container">
+                <div class="column">
+                    <div class="card">
+                        <img src="https://i.imgur.com/DpejE2f.jpeg" alt="Image 1">
+                        <h2>ON BOARD LED</h2>
+                        <br>
+                        <a href="/cocina=on" class="on-btn">ON</a>
+                        <a href="/cocina=off" class="off-btn">OFF</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img src="https://i.imgur.com/DpejE2f.jpeg" alt="Image 2">
+                        <h2>DIODE LED</h2>
+                        <br>
+                        <a href="/cafetera=on" class="on-btn">ON</a>
+                        <a href="/cafetera=off" class="off-btn">OFF</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    </body>
+</html>
